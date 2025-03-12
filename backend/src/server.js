@@ -1,14 +1,21 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import connectDB from "./config/mongodb.js";
+import customerRouter from "./routes/customerRoutes.js";
+import userRouter from "./routes/userRoutes.js";
+import cookieparser from "cookie-parser";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 4700;
+connectDB();
 
+app.use(cors({ origin: "http://localhost:5174", credentials: true }));
 app.use(express.json());
-app.use(cors());
+app.use(cookieparser());
 
-app.listen(port, () =>
-  console.log(`server listening for request via port ${port}`)
-);
+// route handling
+app.use("/api/customers", customerRouter);
+app.use("/api", userRouter);
+
+export default app;

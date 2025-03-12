@@ -12,6 +12,7 @@ import Register from "./pages/Register.jsx";
 import Customers from "./components/Customers.jsx";
 import Deals from "./components/Deals.jsx";
 import Notes from "./components/Notes.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>
 );

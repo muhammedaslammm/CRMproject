@@ -2,4 +2,20 @@
 
 html{
   font-size: 10px;
+  font-family: 'Poppins',sans-serif;
+}
+
+@layer components{
+  .label--register{
+    @apply text-[1.85rem] text-neutral-800 capitalize;
+  }
+  .input--register{
+    @apply border border-neutral-400 rounded-[.3rem] block w-full py-[.6rem] px-[1rem] text-[1.7rem] outline-0 ;
+  }
+  .button--register{
+    @apply capitalize w-full text-white font-medium text-[1.65rem] bg-neutral-800 py-[.7rem] rounded-[.3rem] cursor-pointer hover:bg-neutral-900;
+  }
+  .register--error{
+    @apply absolute top-[4.1rem] left-[.5rem] text-[1.4rem] text-red-900/90 capitalize
+  }
 }
