@@ -1,8 +1,4 @@
 const Customers = () => {
-  return (
-    <div className="customers">
-      <h1>customers sections</h1>
-    </div>
-  );
+  return <div className="customers"></div>;
 };
 export default Customers;

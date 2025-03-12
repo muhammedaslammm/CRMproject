@@ -1,9 +1,5 @@
 const Deals = () => {
-  return (
-    <div className="deals">
-      <h1>deals section</h1>
-    </div>
-  );
+  return <div className="deals"></div>;
 };
 
 export default Deals;
