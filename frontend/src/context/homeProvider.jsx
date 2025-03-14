@@ -1,7 +1,12 @@
 import { CustomersProvider } from "./customersContext";
+import { DealsProvider } from "./DealsContext";
 
 const HomeProvider = ({ children }) => {
-  return <CustomersProvider>{children}</CustomersProvider>;
+  return (
+    <CustomersProvider>
+      <DealsProvider>{children}</DealsProvider>
+    </CustomersProvider>
+  );
 };
 
 export default HomeProvider;

@@ -10,9 +10,10 @@ import Application from "./App.jsx";
 import Home from "./pages/Home.jsx";
 import Register from "./pages/Register.jsx";
 import Customers from "./components/Customers.jsx";
+
+import { AuthProvider } from "./context/AuthContext.jsx";
 import Deals from "./components/Deals.jsx";
 import Notes from "./components/Notes.jsx";
-import { AuthProvider } from "./context/AuthContext.jsx";
 
 const router = createBrowserRouter([
   {

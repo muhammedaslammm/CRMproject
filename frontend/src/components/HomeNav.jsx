@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 const HomeNav = () => {
   return (
-    <nav className="flex gap-[3.5rem] text-[1.9rem] capitalize">
+    <nav className="flex gap-[3.5rem] text-[1.8rem] capitalize">
       <NavLink
         to="/api/home/customers"
         className={({ isActive }) =>

@@ -1,9 +1,10 @@
-const HomeButton = ({ text }) => {
+const HomeButton = ({ buttonLabel, openModal }) => {
   return (
     <button
-      className={`capitalize text-[1.4rem] bg-red-700/85 rounded-[.25rem] text-white font-medium py-[.6rem] px-[.7rem] cursor-pointer`}
+      className={`capitalize text-[1.4rem] bg-red-700/70 rounded-[.2rem] text-white font-medium py-[.4rem] px-[.5rem] cursor-pointer`}
+      onClick={openModal}
     >
-      add {text}
+      add {buttonLabel}
     </button>
   );
 };
